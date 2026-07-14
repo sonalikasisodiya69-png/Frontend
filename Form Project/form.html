@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Manager</title>
+    <style>
+           body 
+            
+           
+    input, button {
+        padding:8px;
+        margin: 5px;
+    }  
+    table {
+        border-collapse:collapse;
+        width:100%;
+    }  
+    table, th, td{
+        border:1px solid black;
+    }  
+    th, td{
+        padding: 10px;
+        text-align: center;
+    } 
+    </style>
+</head>
+<body>
+    <h2>User Form</h2>
+    
+    <form id="userform">
+        <label>NAME:</label>
+        <input type="text" id="name"
+        placeholder="Enter Name" required><br>
+        <LABEL>MOBILE NO:</LABEL>
+        <input type="tel" id="mobile"
+        placeholder="Enter Mobile Number"
+        required><br>
+        <LABEL>PASSWORD:</LABEL>
+        <input type="password" id="password"
+        required><br>
+
+        <label>Gender:</label>
+        <input type="radio" name="Gender"
+        value="Male" required> Male
+        <input type="radio" name="Gender"
+        value="Female" required> Female
+        <br><br>
+
+        <button type="submit">Submit</button>
+        </form>
+
+        <h2>User Data</h2>
+
+        <Table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Mobile</th>
+                    <th>password</th>
+                    <th>Gender</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+        </Table>
+        
+
+
+
+    </form>
+    <label for="NAME"></label>
+    <input type="text" name="name"
+    placeholder="Enter your name" required>
+    
+
+    
+</body>
+</html>
+   

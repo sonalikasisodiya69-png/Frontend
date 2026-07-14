@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Items</h1>
+
+    <br><br>
+    
+    <label for="itemselect">Item:</label>
+    <select name= "Item"id="Item">
+           <option value="Tea"data-rate="10">Tea</option>
+           <option value="Coffee"data-rate="20">Coffee</option>
+           <option value="Juice"data-rate="50">Juice</option>
+           </select>
+           <br><br>
+           <label for="qtyinput">Quantity:</label>
+           <input type="number"id="quantity" placeholder="enter quantity" style="width: 150px;">
+<br><br>
+           <button onclick="addItem()">submit</button>
+
+<h2>Bill;</h2>
+<table border="1" id="billtable">
+    <thead>
+    <tr>
+        <th>Item</th>
+        <th>Rate</th>
+        <th>Quantity</th>
+        <th>amount</th>
+    </tr>
+    </thead>
+    <tbody id="billBody"></tbody>
+    
+    
+    
+    </tbody>
+</table>
+<p><b>Grand Total: ₹ <span id="grandTotal">0</span></b></p>
+
+<script>
+    
+    const rates = {
+    "Tea": 10,
+    "Coffee": 20,
+    "Juice": 50
+};
+
+let billData = [];
+let grandTotal = 0;
+function addItem() {
+    let item = document.getElementById("Item").value;
+    let qty = parseInt(document.getElementById("quantity").value);
+
+    if (!qty || qty <= 0) {
+        alert("Please enter a valid quantity");
+        return;
+    }
+
+    const rate = rates[item];
+    const amount = rate * qty;
+
+    const entry = { item, rate, qty, amount };
+    billData.push(entry);
+
+    var row = `<tr>
+        <td>${item}</td>
+        <td>${qty}</td>
+        <td>${rate}</td>
+        <td>${amount}</td>
+    </tr>`;
+
+ // ✅ Pure JavaScript append
+    document.querySelector('#billBody').insertAdjacentHTML('beforeend', row); 
+ // Add to grand total
+  grandTotal += amount;
+   // Update display
+  document.getElementById('grandTotal').innerText = grandTotal;
+    document.getElementById('quantity').value = '';
+}
+</script>
+</body>
+
+
