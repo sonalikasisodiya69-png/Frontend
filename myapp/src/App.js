@@ -87,6 +87,9 @@ import Studentresult from "./Components/Task7";
 import TrafficLight from './Components/Task8';
 import Balance from './Components/Task9';
 import ShoppingCart from './Components/Task10';
+import Visibility from './Components/Visibilty';
+import Bulb from './Components/Bulb';
+import Arr from './Components/Array';
 function App() {
   return (
     <div>
@@ -101,8 +104,12 @@ function App() {
       <TrafficLight />
       <Balance />
       <ShoppingCart />
+      <Visibility />
+      <Bulb />
+      <Arr />
     </div>
   );
 }
   
 export default App;
+

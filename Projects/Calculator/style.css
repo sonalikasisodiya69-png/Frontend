@@ -1,0 +1,123 @@
+.text-center{
+    text-align: center;
+    color: white;
+    margin-bottom: 15px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #1f1f1f;
+}
+
+.calculator{
+    background: #2b2b2b;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+#inputBox{
+    width: 100%;
+    height: 70px;
+    border: none;
+    outline: none;
+    font-size: 30px;
+    text-align: right;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    background: #444;
+    color: white;
+}
+
+button{
+    width: 70px;
+    height: 70px;
+    margin: 5px;
+    border: none;
+    border-radius: 50%;
+    font-size: 22px;
+    cursor: pointer;
+    background: #3b3b3b;
+    color: white;
+    transition: 0.3s;
+}
+
+/* Hover Effect */
+button:hover{
+    background: #5a5a5a;
+    transform: scale(1.08);
+}
+
+.operator{
+    background: orange;
+}
+
+.operator:hover{
+    background: darkorange;
+}
+
+.equalBtn{
+    background: green;
+}
+
+.equalBtn:hover{
+    background: darkgreen;
+}
+.page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.text-center{
+    text-align: center;
+    color: white;
+    margin-bottom: 15px;
+}
+
+
+.nav-links{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+
+.nav-links a{
+    text-decoration: none;
+    color: white;
+    background: #333;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+
+.nav-links a:hover{
+    background: rgb(86, 89, 172);
+    transform: translateY(-3px);
+}
+
+
+.Back-link{
+    margin-left: 10px;
+}
+
+
+.Next-link{
+    margin-right: 10px;
+}
