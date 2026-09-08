@@ -1,4 +1,4 @@
-/* import logo from './logo.svg';
+/*import logo from './logo.svg';
 import image from "./assets/image.jpg";
 import Greet from './Components/Greet';
 
@@ -14,7 +14,7 @@ function App() {
   );
 }
 
-export default App; */
+export default App; /*
 
 /*import React from "react";
 import Product from "./Components/Product";
@@ -57,7 +57,7 @@ function App() {
   );
 }
 
-export default App;*/
+export default App;/*
 
 /*import React from "react";
 import Navigation from "./Components/Navigation";
@@ -75,7 +75,7 @@ function App() {
 }
 
 export default App;*/
-
+/*
 import StateHook from './Components/StateHook';
 import SmartCounter from "./Components/Task1";
 import AgeCalculator from "./Components/Task2";
@@ -109,7 +109,30 @@ function App() {
       <Arr />
     </div>
   );
+} 
+export default App;
+*/
+import "./App.css";
+import Navbar from "./Components/Navbar";
+import Hero from "./Components/Hero";
+import About from "./Components/About";
+import Skills from "./Components/Skills";
+import Projects from "./Components/Projects";
+import Contact from "./Components/Contact"; 
+import Footer from "./Components/Footer";
+function App() {
+  return (
+    <div className="container">
+      <Navbar />
+      <Hero />
+      <About />
+      <Skills />
+      <Projects />
+      <Contact />
+      <Footer />
+    </div>
+  );
 }
-  
+
 export default App;
 

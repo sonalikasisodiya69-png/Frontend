@@ -1,34 +1,51 @@
-import image1 from "../assets/Shoes.png";
+import React from "react";
 
-const HeroSection = () => {
+function Hero() {
   return (
-    <main className="hero container">
-      <div className="hero-content">
-        <h1>YOUR FEET DESERVE THE BEST</h1>
-        <p>
-          YOUR FEET DESERVE THE BEST AND WE’RE HERE TO HELP YOU WITH OUR
-          SHOES.YOUR FEET DESERVE THE BEST AND WE’RE HERE TO HELP YOU WITH OUR
-          SHOES.
+    <section className="hero" id="home">
+
+      {/* Left Side */}
+      <div className="hero-text">
+
+        <p className="intro">Hi, I'm</p>
+
+        <h1>
+          Sonalika <span>Sisodiya</span>
+        </h1>
+
+        <h2>Frontend Developer</h2>
+
+        <p className="description">
+          I build modern, responsive and user-friendly websites
+          using HTML, CSS, JavaScript and React.
         </p>
 
-        <div className="hero-btn">
-          <button>Shop Now </button>
-          <button className="secondary-btn">Category</button>
+        <div className="hero-buttons">
+          <a href="#contact" className="hire-btn">
+            Hire Me
+          </a>
+
+          <a href="#projects" className="project-btn">
+            View Projects
+          </a>
         </div>
 
-        <div className="shopping">
-          <p>Also Available On</p>
-
-          <div className="brand-icons">
-           
-          </div>
-        </div>
       </div>
+
+      {/* Right Side */}
       <div className="hero-image">
-        <img src={image1} alt="Hero" />
-      </div>
-    </main>
-  );
-};
 
-export default HeroSection;
+        <div className="image-circle"></div>
+
+        <img
+          src={require("../assets/image.jpg")}
+          alt="Sonalika"
+        />
+
+      </div>
+
+    </section>
+  );
+}
+
+export default Hero;

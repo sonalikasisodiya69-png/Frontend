@@ -3,7 +3,6 @@ import React, { useState } from "react";
 function Arr() {
   const [name, setName] = useState("");
   const [age, setAge] = useState("");
-
   const [students, setStudents] = useState([]);
 
   const addStudent = () => {
