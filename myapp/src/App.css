@@ -529,5 +529,378 @@ body {
 .skill-card:hover {
   transform: translateY(-8px);
   border-color: #d01c28;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.10);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f6f8;
+  color: #172033;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+/* Header */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: white;
+  border-bottom: 1px solid #ddd;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.header p {
+  margin: 5px 0 0;
+  color: #777;
+  font-size: 13px;
+}
+
+.add-btn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Add Employee Form */
+.form-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 420px;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.form-header h2 {
+  margin: 0;
+}
+
+.close-btn {
+  border: none;
+  background: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.form-container input,
+.form-container select {
+  width: 100%;
+  height: 42px;
+  padding: 0 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.form-buttons button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.add-btn {
+  cursor: pointer;
+}
+
+/* Summary Cards */
+
+.summary-cards {
+  display: flex;
+  gap: 16px;
+  padding: 28px 40px 12px;
+
+}
+
+.summary-card {
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 20px;
+  flex: 1;
+}
+
+.summary-card p {
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 12px;
+}
+
+.summary-card h2 {
+  font-size: 28px;
+  margin-bottom: 6px;
+}
+
+.summary-card span {
+  font-size: 11px;
+  color: #9ca3af;
+}
+
+
+/* Employee Form */
+
+.employee-form {
+  background-color: white;
+  margin: 0 40px 20px;
+  padding: 20px 25px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+}
+
+
+.employee-form h2 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.employee-form form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.employee-form input,
+.employee-form select {
+  width: 100%;
+  padding: 11px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 13px;
+  outline: none;
+}
+
+.employee-form input:focus,
+.employee-form select:focus {
+  border-color: #2864d7;
+}
+
+.employee-form button {
+  width: fit-content;
+  padding: 11px 20px;
+  background-color: #cc2323;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+/* Employee Table */
+
+.employee-table {
+  background: white;
+  margin: 0 40px 30px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.table-header {
+  padding: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.table-header h2 {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.table-header p {
+  font-size: 11px;
+  color: #9ca3af;
+}
+
+.table-header span {
+  font-size: 11px;
+  color: #6b7280;
+}
+
+/* ===== EMPLOYEE DASHBOARD ===== */
+
+.employee-section {
+  width: 90%;
+  max-width: 1500px;
+  margin: 25px auto;
+}
+
+/* Search + Department */
+.filters {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.filters input {
+  width: 680px;
+  height: 44px;
+  padding: 0 15px;
+  border: 1px solid #d9dde3;
+  border-radius: 7px;
+  outline: none;
+  background: white;
+  font-size: 15px;
+}
+
+.filters select {
+  width: 200px;
+  height: 44px;
+  padding: 0 12px;
+  border: 1px solid #d9dde3;
+  border-radius: 7px;
+  outline: none;
+  background: white;
+  font-size: 15px;
+}
+
+
+/* Employee Box */
+
+.employee-table {
+  width: 100%;
+  margin: 0;
+  background: white;
+  border: 1px solid #e1e4e8;
+  border-radius: 9px;
+  overflow: hidden;
+}
+
+
+/* Heading */
+
+.table-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 20px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.table-heading h2 {
+  margin: 0;
+  font-size: 19px;
+  font-weight: 600;
+  color: #172033;
+}
+
+.table-heading p {
+  margin: 5px 0 0;
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+.table-heading span {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+
+/* Table */
+
+.employee-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.employee-table th {
+  padding: 13px 20px;
+  text-align: left;
+  background: #f8f9fa;
+  color: #6b7280;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.employee-table td {
+  padding: 15px 20px;
+  border-top: 1px solid #eeeeee;
+  font-size: 13px;
+}
+
+.no-data {
+  text-align: center;
+  padding: 35px !important;
+  color: #9ca3af !important;
+  font-size: 13px;
+}
+/* ACTION BUTTONS */
+
+.edit-btn,
+.delete-btn {
+  padding: 7px 14px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s ease;
+  margin-right: 8px;
+}
+
+/* Edit Button */
+
+.edit-btn {
+  background: #f8fafc;
+  color: #374151;
+  border: 1px solid #d1d5db;
+}
+
+.edit-btn:hover {
+  background: #ab3434;
+  color: #fff1f2;
+}
+
+/* Delete Button */
+
+.delete-btn {
+  background: #fff1f2;
+  color: #dc2626;
+  border: 1px solid #fecdd3;
+}
+
+.delete-btn:hover {
+  background: #fee2e2;
 }

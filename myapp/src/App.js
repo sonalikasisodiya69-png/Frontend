@@ -14,7 +14,7 @@ function App() {
   );
 }
 
-export default App; /*
+export default App; */
 
 /*import React from "react";
 import Product from "./Components/Product";
@@ -57,7 +57,7 @@ function App() {
   );
 }
 
-export default App;/*
+export default App;*/
 
 /*import React from "react";
 import Navigation from "./Components/Navigation";
@@ -110,19 +110,20 @@ function App() {
     </div>
   );
 } 
-export default App;
-*/
+export default App;*/
+
 import "./App.css";
-import Navbar from "./Components/Navbar";
-import Hero from "./Components/Hero";
-import About from "./Components/About";
-import Skills from "./Components/Skills";
-import Projects from "./Components/Projects";
-import Contact from "./Components/Contact"; 
-import Footer from "./Components/Footer";
+import Navbar from "./Portfolio/Navbar";
+import Hero from "./Portfolio/Hero";
+import About from "./Portfolio/About";
+import Skills from "./Portfolio/Skills";
+import Projects from "./Portfolio/Projects";
+import Contact from "./Portfolio/Contact"; 
+import Footer from "./Portfolio/Footer";
+
 function App() {
   return (
-    <div className="container">
+    <div>
       <Navbar />
       <Hero />
       <About />
@@ -135,4 +136,46 @@ function App() {
 }
 
 export default App;
+/*import EmployeeDashBoard from "./Components/EmployeeDashBoard";
+import "./App.css";
 
+function App() {
+  return <EmployeeDashBoard />;
+}
+
+export default App;*/
+/*import MovieNavbar from "./Components/MovieNavbar";
+import Home from "./Pages/Home";
+import MovieDetails from "./Pages/MovieDetails";
+import TopRated from "./Pages/TopRated";
+import Upcoming from "./Pages/Upcoming";
+import Popular from "./Pages/Popular";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Login from "./Pages/Login";
+function App() {
+  return (
+    <BrowserRouter>
+      <MovieNavbar />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/popular" element={<Popular />} />
+        <Route path="/movie/:id" element={<MovieDetails />} />
+        <Route
+          path="/top-rated"
+          element={<TopRated />}
+        />
+
+        <Route
+          path="/upcoming"
+          element={<Upcoming />}
+        />
+
+    
+      </Routes>
+    </BrowserRouter>
+  );
+}
+
+export default App;*/

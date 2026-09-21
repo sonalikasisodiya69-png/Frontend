@@ -140,3 +140,29 @@
   border-radius: 10px;
   transition: 0.3s;
 }
+/* Filter Buttons */
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 25px;
+  margin-bottom: 40px;
+}
+
+.filter-buttons button {
+  padding: 10px 22px;
+  border: 1px solid #d01c28;
+  border-radius: 25px;
+  background: transparent;
+  color: #111827;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-buttons button:hover {
+  background: #d01c28;
+  color: white;
+  transform: translateY(-2px);
+}
